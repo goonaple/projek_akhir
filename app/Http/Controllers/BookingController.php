@@ -111,7 +111,6 @@ class BookingController extends Controller
 
     public function paket()
     {
-        // Relationship methods belong on Eloquent models, not controllers.
-        // The `paket()` relation is defined on the `App\Models\booking` model.
+        return $this->belongsTo(Paket::class, 'paket_id', 'id_paket');
     }
 }
